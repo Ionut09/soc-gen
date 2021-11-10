@@ -2,7 +2,7 @@ package com.java._4_oop._1_classes;
 
 public class CNPValidator {
 
-    public static void validateCNP(String cnp) {
+    public static void validateCNP(String cnp) throws IllegalArgumentException {
         var length = cnp.length() == 13;
         if (!length) {
             throw new IllegalArgumentException("Bad CNP. Should have length 13");
