@@ -2,7 +2,7 @@ package com.java._4_oop._1_classes;
 
 import java.math.BigDecimal;
 
-public class Account {
+public class Account { //banking
 
     private String iban;
 
@@ -25,6 +25,7 @@ public class Account {
         System.out.println("Amount " + amount + " withdrawn.\n" +
                 "Remaining balance is: " + balance);
     }
+
 
     public String getIban() {
         return iban;

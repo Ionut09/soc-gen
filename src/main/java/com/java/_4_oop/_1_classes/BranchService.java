@@ -10,6 +10,8 @@ public class BranchService {
         account.withdraw(new BigDecimal(50));
         account.withdraw(new BigDecimal(50));
         account.withdraw(new BigDecimal(1));
+
+
 //        System.out.println(account.getBalance());
     }
 }
