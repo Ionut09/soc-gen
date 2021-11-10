@@ -19,10 +19,8 @@ public class TestingCode {
      The class needs to have one constructor. The constructor has parameters real and
      imaginary of type double and it needs to initialize the fields.
      Write the following methods (instance methods):
-     - Method named getReal without any parameters, it needs to return the value of real
-     field.
-     - Method named getImaginary without any parameters, it needs to return the value of
-     imaginary field.
+     - Method named getReal without any parameters, it needs to return the value of real field.
+     - Method named getImaginary without any parameters, it needs to return the value of imaginary field.
      - Method named add with two parameters real and imaginary of type double, it needs
      to add parameters to fields. In other words, it needs to do a complex number add
      operation as described above.
