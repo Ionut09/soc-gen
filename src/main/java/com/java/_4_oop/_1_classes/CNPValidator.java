@@ -1,11 +1,13 @@
 package com.java._4_oop._1_classes;
 
+import com.java._6_exceptions.MyUncheckkedException;
+
 public class CNPValidator {
 
-    public static void validateCNP(String cnp) throws IllegalArgumentException {
+    public static void validateCNP(String cnp) throws MyUncheckkedException {
         var length = cnp.length() == 13;
         if (!length) {
-            throw new IllegalArgumentException("Bad CNP. Should have length 13");
+            throw new MyUncheckkedException("Bad CNP. Should have length 13");
         }
         for (char c : cnp.toCharArray()) {
             if (!Character.isDigit(c)) {

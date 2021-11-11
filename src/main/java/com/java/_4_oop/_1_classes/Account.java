@@ -6,7 +6,7 @@ public class Account { //banking
 
     private String iban;
 
-    private String owner;
+    private String owner; //e lipsa in baza
 
     private BigDecimal balance; //immutabil
 

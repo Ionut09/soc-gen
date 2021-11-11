@@ -20,12 +20,33 @@ public class Dangerous {
     private static void dangerousMethod(Path p) {  // declare --> throws IOException {
 
         try {
-            System.out.println("Before exception");
             CNPValidator.validateCNP("8721982"); //unchecked
-            System.out.println("After exception");
+            System.out.println("Before exception");
             Files.writeString(p, "Hello exception");
+            System.out.println("After exception");
+
         } catch (IOException | IllegalArgumentException ex) { //multicatch
             System.out.println(ex.getMessage());
+            if (Files.exists(p)) {
+                Files.isWritable(p);
+            }
+        } catch (MyUncheckkedException e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("finally");
+        }
+
+//        catch (MyCheckedException e){
+//            System.out.println(e);
+//        }
+    }
+
+    private static void citescDinFisier(String path) throws IOException {
+        Path path1 = Paths.get("/Users/ionut/workspace/soc-gen/test.txt");
+        if (!Files.exists(path1)) {
+            Files.createFile(path1);
+        } else {
+            Files.delete(path1);
         }
     }
 }
