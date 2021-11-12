@@ -93,6 +93,7 @@ public class Lists {
     }
 }
 
+
 class NamesPredicate implements Predicate<String> {
 
     @Override

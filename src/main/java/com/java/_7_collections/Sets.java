@@ -54,15 +54,13 @@ public class Sets {
 
 //        Comparator
         // int compare(Employee o1, Employee o2);
-        Comparator<Employee> employeeAgeComparator = (Employee o1, Employee o2) -> {
-            return o1.getAge() - o2.getAge();
-        };
+        Comparator<Employee> employeeAgeComparator = (o1, o2) -> o1.getAge() - o2.getAge();
+
         employeeAgeComparator = Comparator.comparing((Employee emp) -> emp.getAge());//comparam obiecte dupa o cheie de comparatie(un field al obiectului)
 //        sorted = new TreeSet<>(employeeAgeComparator.thenComparing((Employee o1, Employee o2) -> o1.getName().compareTo(o2.getName())));
-        sorted = new TreeSet<>(employeeAgeComparator.thenComparing((Employee emp)-> emp.getName()));
+        sorted = new TreeSet<>(employeeAgeComparator.thenComparing((Employee emp) -> emp.getName()));
 
         sorted.addAll(sorted);
-
 
 
     }
